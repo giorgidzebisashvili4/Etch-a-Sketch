@@ -20,7 +20,7 @@ body{
   margin-top: 20px;
 }
 
-.border{
+.board{
   width: 500px;
   height: 500px;
   display: grid;

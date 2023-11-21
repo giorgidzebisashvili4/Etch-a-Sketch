@@ -2,7 +2,8 @@ let container= document.querySelector("body")
 let input = document.querySelector('input')
 let inputBtn = document.querySelector('button')
 
-let gridSize = 5
+
+let gridSize = 16
 grid()
 
 function grid(){
@@ -29,3 +30,15 @@ inputBtn.addEventListener('click',()=>{
     // container.removeChild(gridMaker)
     grid()
 })
+
+let divSelect = document.querySelectorAll(".container>div")
+
+divSelect.forEach((divSelect)=>{
+divSelect.addEventListener('mouseover',(e)=>{
+    e.target.style.background="blue"
+    console.log(e.target)
+    })
+})
+
+
+

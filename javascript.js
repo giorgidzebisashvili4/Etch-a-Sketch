@@ -2,13 +2,17 @@ let container= document.querySelector("body")
 let input = document.querySelector('input')
 let inputBtn = document.querySelector('button')
 
-
-let gridSize = 3
+let gridSize = 16
 
 let gridMaker = document.createElement('div')
 gridMaker.classList.add("container")
+
+let displayGridSize = document.createElement('h3')
+
 grid()
 function grid(){
+displayGridSize.textContent= `Grid size: ${gridSize} x ${gridSize}`
+container.appendChild(displayGridSize)
 
 gridMaker.style.cssText = `display: grid; grid-template-columns: repeat(${gridSize}, 1fr); grid-template-rows: repeat(${gridSize}, 1fr);`
 
@@ -22,7 +26,6 @@ gridMaker.appendChild(divsMaker)
 }
 
 container.appendChild(gridMaker)
-// change color to white after ne numbers
 
 let divSelect = document.querySelectorAll(".container>div")
 
